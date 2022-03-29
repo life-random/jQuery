@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        var a = 5;
+        function outerFunction(){
+            var b  = 10;
+            function innerFunction(){
+                var c = 20;
+                document.write("<br> a= " +a);
+                document.write("a0= " +a+ ", b= " +b+ ", c= " +c);
+            }
+            innerFunction();
+            document.write("a= " +a);
+            ("<br> a1= " +a+ ", b= " +b+ ", c= " +c)
+        }
+        outerFunction();
+        document.write("a= " +a);
+        ("<br> a2= " +a+ ", b= " +b+ ", c= " +c)
+    </script>
+<body>
+    
+</body>
+</html>
