@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		// 가장 가까운 상위 요소 선택자, 선택한 요소와 가까운 요소 중 지정요소에만 적용
+		$(".txt1").closest("div")
+		.css({
+			"border":"2px solid #f00"
+		});
+	});
+</script>
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<div>
+		<div>
+			<p class="txt1">내용</p>
+		</div>
+	</div>
+</body>
+</html>

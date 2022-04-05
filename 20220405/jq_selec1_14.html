@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		// 상위 요소 선택자, 선택한 요소의 상위 요소를 모두 선택합니다.
+		$(".txt1").parents()
+		.css({
+			"border":"2px dashed #00f"
+		});
+		// 상위 지정 요소 선택자, 선택한 요소의 상위 요소 중 지정된 요소에만 적용
+		$(".txt2").parents("div")
+		.css({
+			"border":"2px solid #f00"
+		});
+	});
+</script>
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<section>
+		<div>
+			<p class="txt1">내용</p>
+		</div>
+	</section>
+	<section>
+		<div>
+			<p class="txt2">내용</p>
+		</div>
+	</section>
+</body>
+</html>

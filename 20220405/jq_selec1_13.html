@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		var style_1 = {
+			"background-color":"#0ff",
+			"border":"2px solid #f00"
+		}
+		//지정 형(이전) 요소들 선택자, 첫 번째로 선택한 요소부터 두 번째로 선택한 요소 전까지 적용
+		$(".txt3").prevUntil(".title")
+		.css(style_1);
+		//지정 동생(다음) 요소들 선택자, 첫 번째로 선택한 요소부터 두 번째로 선택한 요소 전까지 적용
+		$(".txt3").nextUntil(".txt6")
+		.css(style_1);
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<h1 class="title">선택자</h1>
+	<p>내용1</p>
+	<p>내용2</p>
+	<p class="txt3">내용3</p>
+	<p>내용4</p>
+	<p>내용5</p>
+	<p class="txt6">내용6</p>
+</div>
+</body>
+</html>
