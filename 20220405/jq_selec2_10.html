@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 탐색 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		// index() 메소드, 지정요소의 인덱스 값을 가져온다
+		var idxNum = $("li").index($("#list3"));
+		console.log(idxNum);
+	});
+</script>
+</head>
+<body>
+	<h1>배열 관련 메서드</h1>
+	<ul>
+		<li>내용1</li>
+		<li>내용2</li>
+		<li id="list3">내용3</li>
+		<li>내용4</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function( ){
+		//unwrap() 메서드, 선택한 요소의 부모 요소를 모두 제거
+		$("strong").unwrap( ); 
+		//wrap() 메서드, 선택한 요소를 새 요소 안에 각각 넣음 
+		$(".ct1").wrap("<div />");
+		//wrapAll() 메서드, 선택한 요소를 새 요소 안에 한 번에 넣음
+		$(".ct2").wrapAll("<div />");
+		//wrapInner() 메서드, 선택한 요소의 모든 하위 요소를 새 요소 안에 넣음
+		$("li").wrapInner("<h3 />");
+	});
+</script>
+<style>
+	div{background-color:aqua;}
+</style>
+</head>
+<body>
+	<h1 id="tit_1">
+	<strong>객체 조작 및 생성</strong>
+	</h1>
+	<p class="ct1">내용1</p>
+	<p class="ct1">내용2</p>
+	<p class="ct2">내용3</p>
+	<p class="ct2">내용4</p>
+	<ul>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+</body>
+</html>

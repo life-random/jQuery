@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		var arr1 = [{
+			"area":"서울", 
+			"name":"무대리"
+			},{
+				"area":"부산", 
+				"name":"홍과장"
+			},{
+				"area":"대전", 
+				"name":"박사장"
+			},{
+				"area":"서울", 
+				"name":"빅마마"
+			}];
+		// $.map() 함수, 배열에 저장한 데이터를 실행 후 반환된 데이터를 배열에 새로 배치
+		var arr2 = $.map(arr1, function(a, b){
+			if(a.area == "서울") {
+				return a;
+			}
+		});
+		console.log(arr2);
+		console.log("==== first End ====");
+		//$.grep() 함수, 배열에 저장된 테이터를 실행 후 true라면, 새로운 배열에 반환
+		var arr3 = $.grep(arr1, function(a, b){
+			if(a.area == "서울") {
+				return true;
+			} else {
+				return false;
+			}
+		});
+		console.log(arr3);
+		console.log("==== Second End ====");    
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

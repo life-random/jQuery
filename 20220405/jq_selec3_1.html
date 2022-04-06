@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		// html() 메서드, 선택 요소의 하위 요소를 추가, 수정, 삭제등에 이용됨
+		var result_1 = $("#sec_1").html( );
+		console.log(result_1);
+		$("#sec_1 p").html("<a href=\"#\">Text1</a>");
+		// text() 메서드, 선택 요소의 포함된 텍스트 수집 및 재구성에 이용됨
+		var result_2 = $("#sec_2").text( );
+		console.log(result_2);    
+		$("#sec_2 h2").text("text()");
+	});
+</script>
+</head>
+<body>
+	<h1><strong>객체 조작 및 생성</strong></h1>
+	<section id="sec_1">
+		<h2><em>html()</em></h2>
+		<p>내용1</p>
+	</section>
+	<section id="sec_2">
+		<h2><em>텍스트()</em></h2>
+		<p>내용2</p>
+	</section>
+</body>
+</html>

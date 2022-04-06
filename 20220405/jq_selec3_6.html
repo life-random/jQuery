@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function( ){
+		//수치 조작 메소드[height],선택한 요소의 height값을 변환 및 반환 합니다
+		var w1 = $("#p1").height();
+		console.log(w1);
+		//수치 조작 메소드[innerHeight],선택한 요소의 innerHeight값을 변환 및 반환 합니다
+		var w2 = $("#p1").innerHeight();
+		console.log(w2);
+		//수치 조작 메소드[outerHeight],선택한 요소의 outerHeight값을 변환 및 반환 합니다
+		var w3 = $("#p1").outerHeight();
+		console.log(w3);
+
+		$("#p2")
+		.outerWidth(100)
+		.outerHeight(100);
+	});
+</script>
+<style>
+	*{padding: 0;}
+	#p1, #p2{
+		width: 100px;
+		height: 50px;
+		padding:20px;
+		border: 5px solid #000;
+		background-color: #ff0;
+	}
+</style>
+</head>
+<body>
+	<h1>수치 조작 메서드</h1>
+	<p id="p1">내용1</p>
+	<p id="p2">내용2</p>
+</body>
+</html>
