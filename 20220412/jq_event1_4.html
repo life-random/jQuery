@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function( ) {
+	//document.ready, 브라우저에서 DOM이 완성됬을때, 출처:https://ojtiger.com/179
+	$(document).ready(function(){
+		var h1 = $(".img1").height();
+		console.log("ready :", h1);
+	});
+	//window.load는 외부호출 (src) 등, 로딩이 완료된 시점, 출처:https://ojtiger.com/179
+	$(window).load(function(){
+		var h2 = $(".img1").height();
+		console.log("load :", h2);
+	});   
+});
+</script>
+</head>
+<body>
+	<p>
+		<img src="http://place-hold.it/300X300" class="img1">
+	</p>
+</body>
+</html>
