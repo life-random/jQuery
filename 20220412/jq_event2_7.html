@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	// delegate(), 선택한 요소의 하위 요소에 이벤트 등록, 동적으로 생성 혹은 복제된 요소에도 적용
+	$(".btn_wrap").delegate(".btn_1.on", 
+	"mouseover focus", function() {
+		alert("HELLO!");
+	});
+	$(".btn_1").addClass("on");
+	// one(), 선택한 요소에 일회성 이벤트를 적용
+	$(document).one("mouseover focus", 
+	".btn_2.on", function() {
+		alert("WELCOME!");
+	});
+	$(".btn_2").addClass("on");
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<p class="btn_wrap">
+		<button class="btn_1">버튼1</button>
+	</p>
+	<p><button class="btn_2">버튼2</button></p>
+</div>
+</body>
+</html>
