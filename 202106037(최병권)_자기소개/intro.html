@@ -1,0 +1,275 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script tyle="text/javascript" src="js/snowfall.jquery.js"></script>
+    <script tyle="text/javascript" src="js/snowfall.js"></script> 
+<style>
+   	li { 
+	   list-style:none;
+	}
+
+	/* 마우스 이벤트 */
+	.cursor {
+		position:absolute;
+		top:0;
+		left: 0;
+		z-index: 9999;
+		width: 350px;
+		height: 100px;
+		transform:translate(-50%, -50%);
+	}
+</style>
+</head>
+<body>
+<div data-theme="c">
+	
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b" class="header">
+			<h1>최병권 포트폴리오</h1>
+		</div>
+		<div data-role="content" style="text-align:center" class="content">
+				<img width="500" src="image/p.jpg" id="maincat">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">소개</a></li>
+				<li><a href="#movie" data-rel="dialog">발표 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">음악</a></li>
+				<li><a href="#gallery">사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" class="footer">
+			<h1>"타인은 자네의 기대를 만족시키기 위해 사는 것이 아니다" -p165 미움받을용기</h1>
+		</div>
+	</div>
+	<!-- 자기 소개 -->
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b" class="header">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>자기 소개</h1>
+		</div>
+		<div data-role="content"  class="content">
+				<div  style="text-align:center">
+					<img width="500" src="image/p.jpg">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e" >
+				<div data-role="content"  class="content">
+					<button id="intro1">나의 가족</button>
+					<button id="intro2">취미</button>
+					<button id="intro3">좋아하는 것</button>
+					<br><p id="introtext"></p>
+				  </div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" class="footer">
+			<h1>"타인은 자네의 기대를 만족시키기 위해 사는 것이 아니다" -p165 미움받을용기</h1>
+		</div>		
+	</div>
+	
+	<!-- 발표 영상 -->
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b" class="header">
+			<h1>발표 영상</h1>
+		</div>
+		<div data-role="content"  class="content">
+			<div class="ui-bar ui-bar-a">좋아하는 동영상</div><br/>
+			<li><iframe width="100%" src="https://www.youtube.com/embed/NJR8Inf77Ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#movie2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="movie2" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b" class="header">
+			<h1>발표 영상2</h1>
+		</div>
+		<div data-role="content"  class="content">
+			<div class="ui-bar ui-bar-a">발표 동영상</div><br/>
+			<li><video controls width="100%" preload="metadata">
+				<source src="media/202106037_work.mp4" type="video/mp4">
+			</video></li>
+		</div>
+		<div data-role="footer">
+			<a href="#movie"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+	
+	<!-- 노래 -->
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header" class="header">
+			<h1>노래1</h1>
+		</div>
+		<div data-role="content"  class="content">
+			<div class="ui-bar ui-bar-e">IU</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="media/iu_blueming.mp3" type="audio/mp3">
+			</audio><br>
+			<img src="image/iu_blueming.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header" class="header">
+			<h1>노래2</h1>
+		</div>
+		<div data-role="content"  class="content">
+			<div class="ui-bar ui-bar-e">IU</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="media/iu_eight.mp3" type="audio/mp3">
+			</audio><br>			
+			<img src="image/iu_eight.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+
+	<!-- 갤러리 -->
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>갤러리</h1>
+		</div>
+		<div data-role="content" class="content">
+            <ul class="picture">
+				<button id="B1">사진1</button>
+				<li><a href="image/cho3.jpg" rel="external" id="P1"><img src="image/cho3.jpg" /></a></li>	
+				<button id="B2">사진2</button>
+				<li><a href="image/cho5.jpg" rel="external" id="P2"><img src="image/cho5.jpg" /></a></li>	
+				<button id="B3">사진3</button>
+				<li><a href="image/p3.jpg" rel="external" id="P3"><img src="image/p3.jpg" /></a></li>					
+				<button id="B4">사진4</button>
+				<li><a href="image/q3.jpg" rel="external" id="P4"><img src="image/q3.jpg" /></a></li>			
+				<button id="B5">사진5</button>
+				<li><a href="image/q4.jpg" rel="external" id="P5"><img src="image/q4.jpg" /></a></li>			
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" class="footer">
+			<h1>"타인은 자네의 기대를 만족시키기 위해 사는 것이 아니다" -p165 미움받을용기</h1>
+		</div>		
+	</div>
+</div>
+
+
+<script>
+	// 테마 색상
+	$(function(){
+		$("img").css("width", "50%")
+				.css("height", "auto");
+		$("#maincat").css("border-radius","50%")
+				.css("width", "30%")
+				.css("height", "auto");
+		$("*").not(".cursor, #bird")
+			.css("background-color","#025951")
+			.css("color", "white");
+		$(".header, .header *, .footer, .footer *").not(".cursor, #bird").css("background-color","#034159");
+		$(".content, .content *, li, ul").not(".cursor, #bird").css("background-color","#02735E");
+		$("#B1, #B2, #B3, #B4, #B5, #intro1, #intro2, #intro3").css("background-color","#038C3E");
+	})
+
+	// 마우스 클릭 이벤트
+	$(function(){
+		$("#B1, #B2, #B3, #B4, #B5, #intro1, #intro2, #intro3").on({
+			"mouceover" : function(){
+				$("#B1, #B2, #B3, #B4, #B5, #intro1, #intro2, #intro3").css("background-color", "blue")
+			},
+			"mouceout" : function(){
+				$("#B1, #B2, #B3, #B4, #B5, #intro1, #intro2, #intro3").css("background-color", "#038C3E")
+			}
+		})
+	})
+
+	// 이미지 슬라이드 이벤트
+	$(document).ready(function(){
+  		$("#B1").click(function(){
+    		$("#P1").toggle();
+  		});
+	});
+	$(document).ready(function(){
+  		$("#B2").click(function(){
+    		$("#P2").toggle();
+  		});
+	});
+	$(document).ready(function(){
+  		$("#B3").click(function(){
+    		$("#P3").toggle();
+  		});
+	});
+	$(document).ready(function(){
+  		$("#B4").click(function(){
+    		$("#P4").toggle();
+  		});
+	});
+	$(document).ready(function(){
+  		$("#B5").click(function(){
+    		$("#P5").toggle();
+  		});
+	});
+
+	
+	// footer 텍스트 이벤트
+	var Num = Math.round(Math.random()*3);
+	var Array = new Array();
+	Array[0] = '"타인은 자네의 기대를 만족시키기 위해 사는 것이 아니다" -p165 미움받을용기';
+	Array[1] = '"행복한 삶을 살기위해 필요한 것은 거의 없다" -마르쿠스 아우렐리우스 안토니우스';
+	Array[2] = '"이미끝나버린 일을 후회하기 보다는 하고 싶었던 일들을 하지못한 것을 후회하라" – 탈무드';
+	Array[3] = '" 추구할 수 있는 용기가 있다면 우리의 모든 꿈은 이뤄질 수 있다" – 월트 디즈니';
+
+	$(function(){
+		$(".footer h1").text(Array[Num]);
+	})
+
+	// 자기소개 텍스트 이벤트
+	$(function(){
+        $("#intro1").on("click", function(){
+          $("#introtext").text("저는 삼형제의  막내입니다. 현재는 아버지와 함께 수영구에서 살고 있어요. 주변에 강변이 있어서 자주 걷고 합니다");      
+        })
+        $("#intro2").on("click", function(){
+          $("#introtext").text("평소에는 컴퓨터를 많이하고 있어요. 최근에는 수영강 주변을 윌라를 들을면서 산책 하는 것을 즐겨요. 윌라는 오디오북인데 책을 쉽게 읽게 해주는 좋은 앱이죠")
+        })
+        $("#intro3").on("click", function(){
+          $("#introtext").text("저는 먹는 것을 좋아해요. 치즈와 커피, 아이스크림을 특히 좋아해요. 저는 교통을 이용하는 것 보다 걷는 것을 좋아해요.")
+        })
+      })
+
+	  // 마우스 이벤트
+	  $(document).ready(function(){  
+			$(document).mousemove(function(e){
+				var mouseX = e.pageX+200;
+				var mouseY = e.pageY+5;
+
+				$('.cursor').css({
+					left: mouseX + "px",
+					top : mouseY + "px"
+				})
+			})
+		})
+
+		//눈내리는 효과
+		$(document).ready(function(){
+            $(document).snowfall({
+                image :"image/flake.png", 
+                minSize: 3, 
+                maxSize:10, 
+                flakeCount : 120
+            });
+        });
+</script>
+<!-- 마우스 따라가는 이미지 이벤트 -->
+<div class="cursor">
+	<img id="bird" src="image/bird.png" alt="">
+</div>
+</body>
+</html>
